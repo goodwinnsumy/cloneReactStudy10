@@ -1,4 +1,9 @@
-header{
-  color: brown;
-  font-size: 33px;
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.active{
+  color: green;
+  font-weight: bold;
 }
