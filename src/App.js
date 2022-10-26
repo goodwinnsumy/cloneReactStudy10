@@ -8,6 +8,7 @@ import Header from "./components/Header/Header";
 import Posts from "./components/Posts/Posts";
 import CssModules from "./components/CssModules/CssModules";
 import StyledComponents from "./components/StyledComponents/StyledComponents";
+import Comments from "./components/Comments/Comments";
 
 class App extends Component {
 
@@ -51,6 +52,8 @@ class App extends Component {
 
         {this.state.visibleCounter&&<Counter name={"Counter"}/>}
         <button onClick={()=>this.setState({visibleCounter:!this.state.visibleCounter})}> Click</button>
+
+        <Comments/>
 
       </>
     );

@@ -5,11 +5,16 @@ import listReducer from "../components/List/listReducer";
 import postsReducer from "../components/Posts/postsReducer";
 
 
+function commentsReduser() {
+
+}
+
 export default combineReducers({
   // auth: authReducer,
   title: titleReducer,
   counter: counterReducer,
   list: listReducer,
-  posts: postsReducer
+  posts: postsReducer,
+  comments: commentsReduser
 
 },);
