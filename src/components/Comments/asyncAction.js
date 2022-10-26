@@ -4,7 +4,7 @@ export const LOADING_START_COMMENTS = "LOADING_START_COMMENTS"
 export const LOADING_END_COMMENTS = "LOADING_END_COMMENTS"
 export const LOADING_ERROR_COMMENTS = "LOADING_ERROR_COMMENTS"
 
-export function LoadingActionComment () {
+export function LoadingActionComments () {
 
   return (dispatch) =>{
       dispatch({type: LOADING_START_COMMENTS});
