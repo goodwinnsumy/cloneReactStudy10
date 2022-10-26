@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {LoadingActionComment} from "./asyncAction";
+import {LoadingActionComments} from "./asyncActionComments";
 import {RiseLoader} from "react-spinners";
 import "./Comments.scss"
 
 class Comments extends Component {
 
   componentDidMount() {
-    this.props.dispatch(LoadingActionComment())
+    this.props.dispatch(LoadingActionComments())
   }
 
   render() {

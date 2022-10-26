@@ -1,4 +1,4 @@
-import {LOADING_START_COMMENTS, LOADING_END_COMMENTS, LOADING_ERROR_COMMENTS} from "./asyncAction";
+import {LOADING_START_COMMENTS, LOADING_END_COMMENTS, LOADING_ERROR_COMMENTS} from "./asyncActionComments";
 import initialStore from "../../redux/initialStore";
 
 export default function commenReducer(commentsFromStore = initialStore, {type, error, payload}) {
