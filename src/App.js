@@ -34,14 +34,14 @@ class App extends Component {
 
       <>
         {/*<img src="https://via.placeholder.com/600/92c952" alt=""/>*/}
-        <Header/>
-        <CssModules/>
-        <StyledComponents/>
-        <Posts/>
-        <Page/>
-        <List addHandler={(el) => this.arrAddHandler(el)} name={"List"} arr={this.state.arr}/>
-        {this.state.visibleCounter && <Counter name={"Counter"}/>}
-        <button onClick={() => this.setState({visibleCounter: !this.state.visibleCounter})}> Click</button>
+        {/*<Header/>*/}
+        {/*<CssModules/>*/}
+        {/*<StyledComponents/>*/}
+        {/*<Posts/>*/}
+        {/*<Page/>*/}
+        {/*<List addHandler={(el) => this.arrAddHandler(el)} name={"List"} arr={this.state.arr}/>*/}
+        {/*{this.state.visibleCounter && <Counter name={"Counter"}/>}*/}
+        {/*<button onClick={() => this.setState({visibleCounter: !this.state.visibleCounter})}> Click</button>*/}
 
         <Comments/>
 
