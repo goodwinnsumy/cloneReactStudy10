@@ -22,12 +22,12 @@ class Comments extends Component {
 
     const styleSpinerComments ={
       display: "block",
-      margin: "0 auto"
+      margin: "250px 500px"
     };
 
     return (
       <div>
-        {comments.loading ? <RiseLoader color="#7936d6" size={300} cssOverride={styleSpinerComments} /> : commentsMap}
+        {comments.loading ? <RiseLoader color="#7936d6" size={50} cssOverride={styleSpinerComments} /> : commentsMap}
       </div>
     );
   }
