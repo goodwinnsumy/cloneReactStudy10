@@ -1,7 +1,7 @@
 import {LOADING_START_COMMENTS, LOADING_END_COMMENTS, LOADING_ERROR_COMMENTS} from "./asyncActionComments";
 import initialStore from "../../redux/initialStore";
 
-export default function commenReducer(commentsFromStore = initialStore, {type, error, payload}) {
+export default function commentsReducer(commentsFromStore = initialStore, {type, error, payload}) {
   switch (type) {
     case LOADING_START_COMMENTS:
       return {
@@ -12,7 +12,8 @@ export default function commenReducer(commentsFromStore = initialStore, {type, e
     case LOADING_END_COMMENTS:
       return {
         ...commentsFromStore,
-        loading: false
+        loading: false,
+        comments: payload
       }
 
     case LOADING_ERROR_COMMENTS:

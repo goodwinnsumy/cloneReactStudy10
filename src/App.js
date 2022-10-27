@@ -12,12 +12,12 @@ import Comments from "./components/Comments/Comments";
 
 class App extends Component {
 
-  state={
-    arr:[1,2,3,4,5,6,"qw","adsf"],
-    visibleCounter:true
+  state = {
+    arr: [1, 2, 3, 4, 5, 6, "qw", "adsf"],
+    visibleCounter: true
   }
 
-  arrAddHandler(el){
+  arrAddHandler(el) {
     let arr = this.state.arr
     arr.push(el)
     this.setState({arr})
@@ -33,25 +33,15 @@ class App extends Component {
     return (
 
       <>
-
-          {/*<img src="https://via.placeholder.com/600/92c952" alt=""/>*/}
-          
+        {/*<img src="https://via.placeholder.com/600/92c952" alt=""/>*/}
         <Header/>
-
-          <CssModules/>
-
-          <StyledComponents/>
-
-
-
+        <CssModules/>
+        <StyledComponents/>
         <Posts/>
-
         <Page/>
-
-        <List addHandler={(el)=>this.arrAddHandler(el)} name={"List"} arr={this.state.arr}/>
-
-        {this.state.visibleCounter&&<Counter name={"Counter"}/>}
-        <button onClick={()=>this.setState({visibleCounter:!this.state.visibleCounter})}> Click</button>
+        <List addHandler={(el) => this.arrAddHandler(el)} name={"List"} arr={this.state.arr}/>
+        {this.state.visibleCounter && <Counter name={"Counter"}/>}
+        <button onClick={() => this.setState({visibleCounter: !this.state.visibleCounter})}> Click</button>
 
         <Comments/>
 

@@ -12,22 +12,22 @@ class Comments extends Component {
 
   render() {
     const {comments, dispatch} = this.props
-    const commentsMap = comments.comment.map((comment, i) => {
-      return <div className={"comments"} key={comment.id}>{comment.name}
-        {/*<p> {comment.name}  </p>*/}
-        {/*<p> {comment.email} </p>*/}
-        {/*<p> {comment.body}  </p>*/}
+    const commentsMap = comments.comments.map((comment) => {
+      return <div className={"comments"} key={comment.id}>
+        <p> {comment.name}  </p>
+        <p> {comment.email} </p>
+        <p> {comment.body}  </p>
       </div>
     })
 
-    const styleSpiner ={
+    const styleSpinerComments ={
       display: "block",
       margin: "0 auto"
     };
 
     return (
       <div>
-        {comments.loading ? <RiseLoader color="#7936d6" size={300} cssOverride={styleSpiner} /> : commentsMap}
+        {comments.loading ? <RiseLoader color="#7936d6" size={300} cssOverride={styleSpinerComments} /> : commentsMap}
       </div>
     );
   }
@@ -35,7 +35,7 @@ class Comments extends Component {
 
 function mapStateToPropsComments(store) {
   return {
-    comment: store.comment
+    comments: store.comments
   }
 }
 

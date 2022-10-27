@@ -9,16 +9,19 @@ export function LoadingActionComments() {
   return (dispatch) =>{
       dispatch({type: LOADING_START_COMMENTS});
 
-      setTimeout (timeoutHandler, 2500)
+      setTimeout (timeoutHandlerComments, 2500)
 
-      function timeoutHandler (){
+      function timeoutHandlerComments (){
         axios ('https://jsonplaceholder.typicode.com/comments')
-          .then(res => {
+          .then(Response => {
               dispatch ({
                   type: LOADING_END_COMMENTS,
-                  payload: res.data
+                  payload: Response.data
+
               })
-          })
+              console.log(Response)
+          }
+          )
           .catch(error => {
               dispatch ({type: LOADING_ERROR_COMMENTS, error})
           })
